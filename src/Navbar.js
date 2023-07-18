@@ -4,7 +4,7 @@ import { FaUser } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center p-4 bg-green-900">
+    <nav className="flex justify-between items-center p-4 bg-[#35736E]">
       <h1 className="text-xl font-bold text-white pl-10">Furni</h1>
       <ul className="flex items-center text-white space-x-4">
         <li className="cursor-pointer">Home</li>

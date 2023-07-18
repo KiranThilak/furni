@@ -3,7 +3,7 @@ import couch from "./img/couch.png";
 
 const HeroSection = () => {
   return (
-    <div className="bg-green-900 mx-auto flex flex-col md:flex-row items-center justify-between text-center md:text-left">
+    <div className="bg-[#35736E] mx-auto flex flex-col md:flex-row items-center justify-between text-center md:text-left">
       <div className="w-full md:w-auto md:mr-10  pl-20">
         <h1 className="text-white font-bold text-4xl md:text-6xl whitespace-nowrap lg:text-7xl">
           Modern Interior
