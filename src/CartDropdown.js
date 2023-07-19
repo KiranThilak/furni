@@ -31,27 +31,36 @@ const CartDropdown = ({ cart }) => {
             style={{ width: "20rem" }}
           >
             <div className="py-2 ">
-              {cart.map((item) => (
-                <a
-                  key={item.id}
-                  href="#"
-                  className="flex items-center px-4 py-3 border-b hover:bg-gray-100 -mx-2"
-                >
-                  <img
-                    className="h-8 w-8 rounded-full object-cover mx-1"
-                    src={item.imageSrc}
-                    alt="avatar"
-                  />
-                  <p className="text-gray-600 text-sm mx-2">
-                    <span className="font-bold">{item.title}</span> added to
-                    cart. Quantity: {item.quantity}
-                  </p>
-                </a>
-              ))}
+              {cart.length > 0 ? (
+                cart.map((item) => (
+                  <div
+                    key={item.id}
+                    className="flex items-center px-4 py-3 border-b hover:bg-gray-100 -mx-2 cursor-pointer"
+                  >
+                    <img
+                      className="h-8 w-8 rounded-full object-cover mx-1"
+                      src={item.imageSrc}
+                      alt="avatar"
+                    />
+                    <p className="text-gray-600 text-sm mx-2">
+                      <span className="font-bold">{item.title}</span> added to
+                      cart. Quantity: {item.quantity}
+                    </p>
+                  </div>
+                ))
+              ) : (
+                <p className="px-4 py-3 text-center text-gray-600 text-sm">
+                  Your cart is empty.
+                </p>
+              )}
             </div>
-            <a href="#" className="block bg-black text-white text-center py-2">
+
+            <div
+              href="#"
+              className="block bg-black text-white text-center py-2"
+            >
               Go To Cart
-            </a>
+            </div>
           </div>
         )}
       </div>
