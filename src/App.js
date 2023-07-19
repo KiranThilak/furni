@@ -5,6 +5,7 @@ import { useState } from "react";
 import Nordic from "./img/Ergonomic chair.png";
 import Kruzo from "./img/Kruzo Chair.png";
 import Ergonomic from "./img/Nordic chair.png";
+import CartDropdown from "./CartDropdown";
 function App() {
   const products = [
     {
@@ -33,8 +34,9 @@ function App() {
       price: "50.0",
     },
   ];
-  const [cartQuantity, setCartQuantity] = useState(0);
+  const [cartQuantity, setCartQuantity] = useState(null);
   const [cart, setCart] = useState([]);
+
   const handleAddCart = (product) => {
     const productIndex = cart.findIndex((item) => item.id === product.id);
 
@@ -51,7 +53,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar cartQuantity={cartQuantity} />
+      <Navbar cartQuantity={cartQuantity} cart={cart} />
       <HeroSection />
       <ItemsSection products={products} handleAddCart={handleAddCart} />
     </div>

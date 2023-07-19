@@ -1,8 +1,8 @@
 import React from "react";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import CartDropdown from "./CartDropdown";
 import { FaUser } from "react-icons/fa";
 
-const Navbar = ({ cartQuantity }) => {
+const Navbar = ({ cartQuantity, cart }) => {
   return (
     <nav className="flex justify-between items-center p-4 bg-[#35736E]">
       <h1 className="text-xl font-bold text-white pl-10">Furni</h1>
@@ -18,11 +18,7 @@ const Navbar = ({ cartQuantity }) => {
             alt="cart icon"
             className="w-6 h-6 cursor-pointer pr-2 "
           />
-          <AiOutlineShoppingCart
-            src="image1.png"
-            alt="user icon"
-            className="w-6 h-6 cursor-pointer "
-          />
+          <CartDropdown cart={cart} />
           <span className="ml-1 text-white font-medium">{cartQuantity}</span>
         </div>
       </ul>
