@@ -5,7 +5,7 @@ import { useState } from "react";
 import Nordic from "./img/Ergonomic chair.png";
 import Kruzo from "./img/Kruzo Chair.png";
 import Ergonomic from "./img/Nordic chair.png";
-import CartDropdown from "./CartDropdown";
+
 function App() {
   const products = [
     {
