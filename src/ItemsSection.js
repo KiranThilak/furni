@@ -1,37 +1,6 @@
 import React from "react";
-import Nordic from "./img/Ergonomic chair.png";
-import Kruzo from "./img/Kruzo Chair.png";
-import Ergonomic from "./img/Nordic chair.png";
 
-const ItemsSection = () => {
-  const products = [
-    {
-      id: 3,
-      imageSrc: Ergonomic,
-      imageAlt: "Ergonomic Chair",
-      title: "Ergonomic Chair",
-
-      price: "43.0",
-    },
-
-    {
-      id: 2,
-      imageSrc: Kruzo,
-      imageAlt: "Kruzo Aero Chair",
-      title: "Kruzo Aero Chair",
-
-      price: "78.0",
-    },
-    {
-      id: 1,
-      imageSrc: Nordic,
-      imageAlt: "Nordic CHAIR",
-      title: "Nordic CHAIR",
-
-      price: "50.0",
-    },
-  ];
-
+const ItemsSection = ({ products, handleAddCart }) => {
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
@@ -76,7 +45,10 @@ const ItemsSection = () => {
                 </div>
               </div>
               <div className="absolute bottom--1 left-0 right-0 flex items-end justify-center opacity-0 group-hover:opacity-100 ">
-                <button className="bg-black text-2xl font-medium text-white px-4 py-2 rounded-full">
+                <button
+                  className="bg-black text-2xl font-medium text-white px-4 py-2 rounded-full"
+                  onClick={() => handleAddCart(product)}
+                >
                   +
                 </button>
               </div>

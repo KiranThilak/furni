@@ -20,7 +20,7 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="flex justify-end mt-6">
-        <img src={couch} alt="Image" className="w-full md:w-auto" />
+        <img src={couch} alt="couch" className="w-full md:w-auto" />
       </div>
     </div>
   );

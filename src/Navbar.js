@@ -2,7 +2,7 @@ import React from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaUser } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = ({ cartQuantity }) => {
   return (
     <nav className="flex justify-between items-center p-4 bg-[#35736E]">
       <h1 className="text-xl font-bold text-white pl-10">Furni</h1>
@@ -23,6 +23,7 @@ const Navbar = () => {
             alt="user icon"
             className="w-6 h-6 cursor-pointer "
           />
+          <span className="ml-1 text-white font-medium">{cartQuantity}</span>
         </div>
       </ul>
     </nav>
