@@ -55,10 +55,7 @@ const CartDropdown = ({ cart }) => {
               )}
             </div>
 
-            <div
-              href="#"
-              className="block bg-black text-white text-center py-2"
-            >
+            <div className="block bg-black text-white text-center py-2">
               Go To Cart
             </div>
           </div>
